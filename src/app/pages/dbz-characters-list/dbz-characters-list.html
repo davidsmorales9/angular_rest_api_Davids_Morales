@@ -1,0 +1,23 @@
+<p>demon-slayer-characters-list works!</p>
+
+<app-primary-character-card>
+  <p>Progra WEB V2</p>
+</app-primary-character-card>
+
+@for (item of getDbzCharacterList(); track item.id) {
+  <app-character-card
+    [data]="item"
+    [type]="characterCardType.FILLED"
+  >
+
+  <p>PROGRA WEB V1</p>
+  </app-character-card>
+
+} @empty {
+  <p>no hay elemento para mostrar</p>
+}
+
+<!--CREAR UN CARD, EL OBJETO LLEVARÁ UN ARRAY.
+
+sE DEBE CREAR UN NUEVO COMPONENTE Combat_style_character-->
+

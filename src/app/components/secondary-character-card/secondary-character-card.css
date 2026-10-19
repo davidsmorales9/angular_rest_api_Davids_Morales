@@ -1,0 +1,26 @@
+mat-card-content {
+    display: flex;
+}
+
+img{
+    width: 50px;
+    height: auto;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}

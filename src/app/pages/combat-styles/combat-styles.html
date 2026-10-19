@@ -1,0 +1,9 @@
+@for (item of getCombatStyleList(); track item.id) {
+
+    <!-- Cada card recibe el estilo y los personajes relacionados. -->
+    <app-secondary-character-card
+    [data]="item"> 
+
+</app-secondary-character-card>
+
+}

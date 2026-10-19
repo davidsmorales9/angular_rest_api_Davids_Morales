@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-content>
+        
+        <!-- Datos principales del estilo imagen y descripción. -->
+        <section class="left">
+            @if (data()?.image) {
+                <img [src]="data()?.image" alt="Estilo de combate">
+            } @else {
+                <p>Imagen no disponible</p>
+            }
+            <p>{{ data()?.description }}</p>
+        </section>
+
+        <!-- Personajes que comparten este estilo, con su información. -->
+        <section class="right">
+            <!-- data obtiene el valor del input del card, el ? evita errores si aun no hay datos-->
+            <!--??[] es un arreglo vacío por defecto-->
+            @for (character of data()?.combat_style_character ?? []; track character.id) {
+                <article>
+                    <h3>{{ character.name }}</h3>
+                    <p>{{ character.description }}</p>
+                </article>
+            }
+        </section>
+    </mat-card-content>
+</mat-card>

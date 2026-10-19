@@ -1,0 +1,8 @@
+<p>Backend Local</p>
+@if(productService.productsResource.isLoading()){
+    <div>Se esta ejecutando la petición</div>
+}
+
+@if(productService.productsResource.error()){
+    <div>Hay error en la petición</div>
+}
