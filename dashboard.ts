@@ -34,7 +34,7 @@ export class Dashboard {
     },
     {
       name: 'Pokémon',
-      route: '/pokemon',
+      route: '/pokemon-list',
       image: 'https://static.vecteezy.com/system/resources/previews/068/680/162/non_2x/pokemon-logo-on-a-blue-background-free-vector.jpg',
       description: 'Atrapa y entrena a tus criaturas favoritas en este universo pendiente.'
     }

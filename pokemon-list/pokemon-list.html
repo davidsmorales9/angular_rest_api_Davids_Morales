@@ -1,0 +1,14 @@
+<p class="title-section">Pokémon</p>
+
+<div class="cards-container">
+    @for (item of getPokemonCharacterList(); track item.id) {
+        <app-character-card
+            [data]="item"
+            [type]="characterCardType.FILLED"
+        >
+            <p class="card-subtitle">Estilo</p>
+        </app-character-card>
+    } @empty {
+        <p>No hay Pokémon para mostrar</p>
+    }
+</div>
