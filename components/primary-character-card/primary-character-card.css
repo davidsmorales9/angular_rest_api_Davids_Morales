@@ -1,0 +1,12 @@
+mat-card{
+    height: 400px;
+    width: 400px;
+    background-color: orange;
+    box-sizing: border-box;
+}
+
+img {
+    width: 130px;
+    height: auto;
+    
+}

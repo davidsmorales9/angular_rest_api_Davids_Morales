@@ -1,0 +1,19 @@
+.combat-styles-box {
+margin-top: 15px;
+padding-top: 10px;
+border-top: 1px solid #eaeaea; /* Una línea divisoria sutil */
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.styles-title {
+font-size: 0.9rem;
+font-weight: bold;
+color: rgb(0, 0, 0);
+}
+
+ul {
+margin: 5px 0 0 15px;
+padding: 0;
+font-size: 0.85rem;
+color: gray;
+}

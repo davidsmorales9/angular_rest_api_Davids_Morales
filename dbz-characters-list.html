@@ -1,0 +1,24 @@
+<div class="card">
+
+@for (item of getDbzCharacterList(); track item.id) {
+  <app-character-card
+    [data]="item"
+    [type]="characterCardType.FILLED"
+  >
+
+  <!--Nuevo componente creado en Combat-Style-Character-->
+  <app-combat-style-character 
+        [combatStyles]="item.combatStyles">
+      </app-combat-style-character>
+  
+  </app-character-card>
+
+
+} @empty {
+  <p>no hay elemento para mostrar</p>
+}
+</div>
+<!--CREAR UN CARD, EL OBJETO LLEVARÁ UN ARRAY.
+
+sE DEBE CREAR UN NUEVO COMPONENTE Combat_style_character-->
+
