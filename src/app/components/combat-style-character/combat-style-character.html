@@ -1,0 +1,11 @@
+<div class="combat-styles-box">
+<span class="styles-title">Estilos de combate:</span>
+<ul>
+    <!--Se añade () porque es un signal-->
+    @for (style of combatStyles(); track style) {
+    <li>{{ style }}</li>
+    } @empty {
+    <li>Sin estilos registrados</li>
+    }
+</ul>
+</div>

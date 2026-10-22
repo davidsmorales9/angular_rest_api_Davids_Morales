@@ -1,12 +1,24 @@
-<p>digimon-list works!</p>
-@if(digimonCharacter.digimonResource.isLoading()) {
-    <div>Se está consultando la información...</div>
+<p class="title-section">Lista de Digimons</p>
+
+@if (digimonCharacter.digimonResource.isLoading()) {
+    <div class="loading-message">Se está consultando la información...</div>
 }
 
 @if (digimonCharacter.digimonResource.error()) {
-    <div>Ocurrió un error</div>
+    <div class="error-message">Ocurrió un error al cargar los datos</div>
 }
 
-@if (digimonCharacter.digimonResource.hasValue()){
-    <div>{{digimonCharacter.digimonResource.value() | json}}</div>
+@if (digimonCharacter.digimonResource.hasValue()) {
+    <div class="cards-container">
+        @for (item of getDigimonCharacterList(); track item.id) {
+            <app-character-card
+                [data]="item"
+                [type]="characterCardType.FILLED"
+            >
+                <p class="card-subtitle">DIGIMON</p>
+            </app-character-card>
+        } @empty {
+            <p>No hay elementos para mostrar</p>
+        }
+    </div>
 }

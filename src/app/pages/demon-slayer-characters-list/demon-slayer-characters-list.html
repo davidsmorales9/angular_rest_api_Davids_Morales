@@ -1,14 +1,13 @@
-<p>demon-slayer-characters-list works!</p>
-
+<!-- 
 <h3>{{firstName | titlecase}}</h3>
 <h3>{{fistLastName | uppercase }}</h3>
 <h3>{{SecondLastName | lowercase }}</h3>
 <h3>{{objectExample | json}}</h3>
-<!--Agrega signo de dollar y formato decimal como monto real-->
+<Agrega signo de dollar y formato decimal como monto real
 <h3>{{amount | currency}}</h3> 
-<!--Para formato de fecha-->
-<h3>{{currentDate | date}}</h3>
-
+<Para formato de fecha
+<h3>{{currentDate | date}}</h3>-->
+<div class="card">
 @for (item of getDemonSlayerCharacterList(); track item.id) {
   <app-character-card
     [data]="item"
@@ -19,3 +18,4 @@
 } @empty {
   <p>no hay elemento para mostrar</p>
 }
+</div>

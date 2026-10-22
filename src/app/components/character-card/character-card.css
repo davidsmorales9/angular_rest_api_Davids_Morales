@@ -15,6 +15,7 @@ mat-card-header {
   height: 150px;
   object-fit: cover;
   object-position: top;
+  cursor: pointer; /* Indica que la imagen se puede presionar */
 }
 
 .image-rounded {
@@ -25,4 +26,28 @@ mat-card-header {
   object-position: center;
   padding: 10px;
   border: 1px solid lightgray;
+  cursor: pointer; /* Indica que la imagen se puede presionar */
+}
+
+
+/* Fondo oscuro que cubre toda la pantalla al abrir la imagen */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* La imagen grande centrada, manteniendo sus proporciones sin deformarse */
+.modal-img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
 }

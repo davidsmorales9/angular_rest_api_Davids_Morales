@@ -1,12 +1,23 @@
 <mat-card class="main-container">
-  <mat-card-header>
-    <img [ngClass]="type()==='filled'?'image-filled':'image-rounded' "
-        [src]=data()?.img
-        alt="{{data()?.name}}">
-  </mat-card-header>
-  <mat-card-content>
-    <h3> {{ data()?.id }} - {{ data()?.name }}</h3>
-    <p> {{ data()?.description }}</p>
-  </mat-card-content>
+  <!-- Ponemos la imagen directamente aquí arriba con el evento click -->
+  <img mat-card-image
+      [ngClass]="type()==='filled'?'image-filled':'image-rounded'"
+      [src]="data()?.img"
+      [alt]="data()?.name"
+      (click)="openImageModal(data()?.img)">
 
+  <mat-card-header>
+    <h3>{{ data()?.id }} - {{ data()?.name }}</h3>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>{{ data()?.description }}</p>
+    <ng-content></ng-content>
+  </mat-card-content>
 </mat-card>
+
+@if (isModalOpen) {
+  <div class="modal-overlay" (click)="closeModal()">
+    <img [src]="selectedImage" class="modal-img" alt="Imagen ampliada">
+  </div>
+}

@@ -1,0 +1,40 @@
+/* Título superior de la sección */
+.title-section {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor principal  para acomodarlas de 3 en 3 */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fuerza exactamente 3 columnas en pantallas grandes */
+  gap: 5px;                           
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Mensajes de estado (Carga o Error) */
+.loading-message, .error-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error-message {
+  color: #d9534f;
+}
+
+/* Estilo para el texto secundario dentro de la tarjeta */
+.card-subtitle {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 8px;
+}

@@ -29,13 +29,13 @@ export class Dashboard {
     {
       name: 'Digimon',
       route: '/digimon-list',
-      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop&q=60',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5pRC_IjWtuWmXjEh7ARNjzlERC_qbqSNrPhkw3wcDpA&s=10',
       description: 'Adéntrate en el mundo digital y conoce a todas las criaturas Digimon.'
     },
     {
       name: 'Pokémon',
-      route: '/pokemon',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0tJkejQOKlNQj26yEQN_41_a7Wzo9mLIqBDrKku1wg2M6-BCGUgKNY-H2&s=10',
+      route: '/pokemon-list',
+      image: 'https://static.vecteezy.com/system/resources/previews/068/680/162/non_2x/pokemon-logo-on-a-blue-background-free-vector.jpg',
       description: 'Atrapa y entrena a tus criaturas favoritas en este universo pendiente.'
     }
   ];

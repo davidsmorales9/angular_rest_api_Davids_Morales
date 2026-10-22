@@ -13,4 +13,25 @@ import {CharacterCardType} from '../../enums/character-card-type';
 export class CharacterCard {
   data = input<CharacterModel>();
   type = input<CharacterCardType>(CharacterCardType.FILLED);
+
+
+// Variables de estado para el modal de imagen, Funcionan como el interruptor y la memoria. 
+// Recuerda que el modal puede estar abierto( True) o cerrado (False).
+  isModalOpen = false;
+  selectedImage = '';
+
+  // Método para abrir el modal con la imagen seleccionada
+  // Toma su enlace, lo asigna a la memoria y cambia el interruptor a true.
+  openImageModal(imageUrl: string | undefined) {
+    if (imageUrl) {
+      this.selectedImage = imageUrl;
+      this.isModalOpen = true;
+    }
+  }
+
+  // Método para cerrar el modal
+  closeModal() {
+    this.isModalOpen = false;
+    this.selectedImage = '';
+  }
 }

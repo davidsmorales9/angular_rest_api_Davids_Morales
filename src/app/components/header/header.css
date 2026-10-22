@@ -1,0 +1,24 @@
+/* Estilo general de la barra */
+.main-header {
+background-color: #ff0000;
+padding: 15px;
+}
+
+.nav-links {
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+}
+
+@media (max-width: 600px) {
+.nav-links {
+    flex-direction: column; /* Los pasa a columna para que encajen bien en pantallas pequeñas. */
+    align-items: center;
+    gap: 10px;
+}
+}
